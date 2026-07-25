@@ -205,10 +205,15 @@ app.innerHTML = `
       <img src="${logo}" alt="GenetechHub logo" />
       GenetechHub
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="nav-links">
       ${NAV_LINKS.map(([href, label]) => `<a href="${href}">${label}</a>`).join('')}
     </nav>
-    <a class="btn btn-primary btn-sm nav-cta" href="#download">${ic('download', 'icon')} Download</a>
+    <div class="nav-right">
+      <a class="btn btn-primary btn-sm nav-cta" href="#download">${ic('download', 'icon')} Download</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -429,6 +434,22 @@ app.innerHTML = `
   <p class="footer-note">Internal tool for Genetech Hub staff. Questions or feature requests go straight to the dev team.</p>
 </footer>
 `;
+
+// ---------- Mobile nav ----------
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+navToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  navToggle.classList.toggle('active', isOpen);
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+});
+navLinks.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+});
 
 // ---------- Live release metadata ----------
 // Best-effort: if the API is unreachable (offline preview, tunnel down),
