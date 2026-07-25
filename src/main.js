@@ -1,9 +1,7 @@
 import './style.css';
 import logo from './assets/logo.png';
 
-// Where the backend release store lives. The production domain is a
-// Cloudflare Tunnel straight into the same local API this repo runs
-// (docker-compose's `cloudflared` service) - GET /releases/* is public
+// Where the backend release store lives. GET /releases/* is public
 // (see api/routes/releases.routes.js) so this page can hit it directly.
 const API_BASE = 'https://appapi.genetechhub.africa';
 const FALLBACK_VERSION = '1.0.0';
@@ -94,7 +92,7 @@ const FEATURES = [
   {
     icon: 'columns', title: 'Live Project Kanban',
     desc: 'Drag-and-drop boards that update on every teammate\'s screen the instant a card moves.',
-    bullets: ['Custom columns per project', 'Real-time sync over Socket.IO', 'Keeps working offline — updates queue and replay on reconnect'],
+    bullets: ['Custom columns per project', 'Real-time sync across every open device', 'Keeps working offline — updates queue and replay on reconnect'],
   },
   {
     icon: 'bell', title: 'Smart Notifications',
@@ -153,7 +151,7 @@ const FLAGSHIP_POINTS = [
   },
   {
     title: 'One codebase, six platforms',
-    desc: 'Android, iOS, web, Windows, macOS and Linux all ship from the same Flutter codebase — the same features and the same roadmap everywhere your team works.',
+    desc: 'Android, iOS, web, Windows, macOS and Linux all ship from the same shared codebase — the same features and the same roadmap everywhere your team works.',
   },
 ];
 
@@ -169,7 +167,7 @@ const COMPACT_POINTS = [
   { icon: 'calendar', title: 'Scheduled & recurring to-dos', desc: 'Set it once — a daily background job makes sure nothing falls through the cracks.' },
   { icon: 'eye', title: 'Storefront visibility control', desc: 'Toggle what customers see in the store, independent of internal stock tracking.' },
   { icon: 'layers', title: 'Built to grow with the business', desc: '23 backend domains already exist — suppliers, services, software projects and more — ready to switch on.' },
-  { icon: 'checkCircle', title: 'Firebase-backed accounts', desc: 'Secure sign-in and push messaging on infrastructure built for scale.' },
+  { icon: 'checkCircle', title: 'Secure, scalable accounts', desc: 'Secure sign-in and push messaging on infrastructure built for scale.' },
   { icon: 'users', title: 'Built by the team, for the team', desc: 'This is an in-house tool — feature requests go straight to the people who build it.' },
 ];
 
@@ -179,13 +177,12 @@ const INTEGRATIONS = [
   { code: 'CL', color: '#111827', name: 'Clay', desc: 'Async table-run enrichment for deeper, structured lead data.' },
   { code: 'HS', color: '#f97316', name: 'HubSpot CRM', desc: 'Push enriched leads straight into your existing HubSpot pipeline.' },
   { code: 'KK', color: '#059669', name: 'KopoKopo', desc: 'Mobile-money STK push and pay-by-link, wired into invoicing.' },
-  { code: 'FB', color: '#eab308', name: 'Firebase', desc: 'Auth, push messaging and cloud infrastructure under the hood.' },
 ];
 
 const ARCHITECTURE = [
-  { title: 'Write locally, first', desc: 'Kanban moves, email drafts and custom templates save to on-device SQLite the instant you make them — before any network call happens.' },
+  { title: 'Write locally, first', desc: 'Kanban moves, email drafts and custom templates save to on-device local storage the instant you make them — before any network call happens.' },
   { title: 'Queue in an outbox', desc: 'Every change becomes an outbox entry, replayed in order once connectivity returns. A safety-net timer and connectivity listener keep the queue moving.' },
-  { title: 'Sync — and go live', desc: 'Project boards add a Socket.IO layer on top: teammates online at the same time see each other\'s changes immediately, no refresh needed.' },
+  { title: 'Sync — and go live', desc: 'Project boards add a live sync layer on top: teammates online at the same time see each other\'s changes immediately, no refresh needed.' },
 ];
 
 const PLATFORMS = [
