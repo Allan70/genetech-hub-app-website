@@ -163,7 +163,7 @@ const COMPACT_POINTS = [
   { icon: 'key', title: 'Bring your own API keys', desc: 'Each staff member can wire up their own Apollo, Clay, HubSpot or Places credentials.' },
   { icon: 'refresh', title: 'Instant, cache-first screens', desc: 'Dashboard and Inventory paint from the last snapshot immediately, then quietly refresh.' },
   { icon: 'mapPin', title: 'Built for the local market', desc: 'KES pricing and mobile-money payments, end to end — not a generic template.' },
-  { icon: 'printer', title: 'Print jobs, tracked', desc: 'Every physical print (like receipts) is logged with a status, not fire-and-forget.' },
+  { icon: 'printer', title: 'Print anywhere, any printer', desc: 'Send straight to any printer already connected to your device, or queue a job to a shared Epson Connect printer from anywhere — with a real print queue, not fire-and-forget.' },
   { icon: 'calendar', title: 'Scheduled & recurring to-dos', desc: 'Set it once — a daily background job makes sure nothing falls through the cracks.' },
   { icon: 'eye', title: 'Storefront visibility control', desc: 'Toggle what customers see in the store, independent of internal stock tracking.' },
   { icon: 'layers', title: 'Built to grow with the business', desc: '23 backend domains already exist — suppliers, services, software projects and more — ready to switch on.' },
