@@ -382,9 +382,9 @@ app.innerHTML = `
         <details class="install-steps">
           <summary>${ic('monitor', 'icon')} How to install on Windows</summary>
           <ol>
-            <li>Click <b>Download for Windows</b> — a .zip archive lands in your Downloads folder.</li>
-            <li>Extract it anywhere, then open the extracted folder.</li>
-            <li>Run <b>GenetechHub.exe</b> and sign in. If SmartScreen warns about an unrecognized app, choose <b>More info &rarr; Run anyway</b>.</li>
+            <li>Click <b>Download for Windows</b> — an installer (.msi) lands in your Downloads folder.</li>
+            <li>Run it and follow the setup wizard. If SmartScreen warns about an unrecognized app, choose <b>More info &rarr; Run anyway</b>.</li>
+            <li>Genetech Hub is added to your Start menu — open it from there and sign in.</li>
           </ol>
         </details>
       </div>
@@ -404,7 +404,7 @@ app.innerHTML = `
         </div>
         <div class="download-card">
           <div class="icon-lg">${ic('monitor', 'icon icon-lg')}</div>
-          <h3 style="color:#fff;margin-bottom:6px">GenetechHub.zip</h3>
+          <h3 style="color:#fff;margin-bottom:6px">GenetechHub.msi</h3>
           <p style="margin-bottom:18px" id="dl-windows-updated">v${FALLBACK_VERSION}</p>
           <a id="dl-windows-button" class="btn btn-primary" href="${API_BASE}/releases/latest/download?platform=windows">
             ${ic('download')} Download for Windows
