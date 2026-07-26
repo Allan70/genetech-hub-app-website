@@ -57,10 +57,10 @@ const NAV_LINKS = [
 ];
 
 const STATS = [
-  ['6', 'Platforms from one codebase'],
-  ['23', 'Backend API domains'],
+  ['6', 'Kinds of devices supported'],
+  ['23', 'Business areas covered'],
   ['9', 'Built-in analytics reports'],
-  ['3', 'Offline-first sync engines'],
+  ['3', 'Places that keep working offline'],
 ];
 
 const FEATURES = [
@@ -96,13 +96,13 @@ const FEATURES = [
   },
   {
     icon: 'bell', title: 'Smart Notifications',
-    desc: 'Push alerts that open the exact right screen — every time, from any app state.',
-    bullets: ['Deep-links from a stock alert straight to Inventory', 'Admin-defined event triggers, no code required', 'Personal notification inbox for every user'],
+    desc: 'Push alerts that take you straight to what they\'re about — every time, even if the app isn\'t open.',
+    bullets: ['A stock alert takes you straight to Inventory', 'Admins decide what triggers an alert, no coding needed', 'Personal notification inbox for every user'],
   },
   {
     icon: 'clock', title: 'Activity Log & Audit Trail',
     desc: 'Every meaningful action, logged and searchable — "who changed this" is never a mystery.',
-    bullets: ['Full audit history per record', 'Backed by a dedicated audit-log API', 'Supports accountability across a growing team'],
+    bullets: ['Full history per record', 'Every action is tracked automatically', 'Supports accountability across a growing team'],
   },
   {
     icon: 'trendingUp', title: 'Analytics & Data Export',
@@ -118,23 +118,23 @@ const FLAGSHIP_POINTS = [
     desc: 'Sales and expenses merge into a single running timeline with a live grand total. No more closing the month by matching two exports against each other.',
   },
   {
-    title: 'Real offline-first — three dedicated sync engines',
-    desc: 'Kanban boards, email drafts, and custom templates all write to local storage first and queue changes in an outbox. Lose signal in the field or the back office — nothing is lost, and it all sends the moment you reconnect.',
+    title: 'Works fully offline, wherever you are',
+    desc: 'Kanban boards, email drafts, and custom templates all save straight to your device first. Lose signal in the field or the back office — nothing is lost, and it all sends the moment you\'re back online.',
   },
   {
     title: 'Live, multi-device collaboration on project boards',
-    desc: 'Move a card and every teammate with that project open sees it instantly over a live socket connection — layered on top of the offline engine, so it degrades gracefully instead of breaking.',
+    desc: 'Move a card and every teammate with that project open sees it instantly. If someone loses their connection, nothing breaks — it just quietly catches up once they\'re back.',
   },
   {
     title: 'A lead-generation pipeline built in, not bolted on',
-    desc: 'Search real businesses by location, then enrich with one tap: Apollo for verified contacts, Clay for deep data enrichment, HubSpot to push straight into your CRM. Bring your own API keys, or use the shared evaluation key.',
+    desc: 'Search real businesses by location, then enrich with one tap: Apollo for verified contacts, Clay for deep data enrichment, HubSpot to push straight into your CRM. Connect your own Apollo, Clay & HubSpot accounts, or use the shared trial account.',
   },
   {
     title: 'Get paid without leaving the app',
     desc: 'KopoKopo mobile-money is wired straight into invoicing — send an STK push to a customer\'s phone, or hand them a pay-by-link. No manual matching of M-Pesa messages to invoices.',
   },
   {
-    title: 'An email platform your team can actually build in',
+    title: 'An email platform your team can actually create in',
     desc: 'A drag-and-block template builder means anyone can compose an on-brand email from structured content — text, tables, links — without touching HTML or waiting on a developer.',
   },
   {
@@ -150,25 +150,25 @@ const FLAGSHIP_POINTS = [
     desc: 'One tap in Settings exports everything. Nothing your team enters is ever locked behind a tool you can\'t get it back out of.',
   },
   {
-    title: 'One codebase, six platforms',
-    desc: 'Android, iOS, web, Windows, macOS and Linux all ship from the same shared codebase — the same features and the same roadmap everywhere your team works.',
+    title: 'One app, six kinds of devices',
+    desc: 'Android, iOS, web, Windows, macOS and Linux all get the exact same features — nothing left out no matter what device your team uses.',
   },
 ];
 
 // Additional compact selling points (12 more = 22 total)
 const COMPACT_POINTS = [
-  { icon: 'bell', title: 'Deep-linked push alerts', desc: 'A notification opens the exact screen it refers to — even from a killed app.' },
-  { icon: 'zap', title: 'No-code notification rules', desc: 'Admins define what triggers an alert and who gets it, with no dev cycle.' },
-  { icon: 'shield', title: 'Server-enforced roles', desc: 'Admin, Manager and staff permissions are checked on every route, not just hidden in the UI.' },
-  { icon: 'key', title: 'Bring your own API keys', desc: 'Each staff member can wire up their own Apollo, Clay, HubSpot or Places credentials.' },
-  { icon: 'refresh', title: 'Instant, cache-first screens', desc: 'Dashboard and Inventory paint from the last snapshot immediately, then quietly refresh.' },
+  { icon: 'bell', title: 'Deep-linked push alerts', desc: 'A notification takes you straight to what it\'s about — even if the app isn\'t running.' },
+  { icon: 'zap', title: 'No-code notification rules', desc: 'Admins define what triggers an alert and who gets it — no waiting on developers.' },
+  { icon: 'shield', title: 'Permissions that are actually enforced', desc: 'Admin, Manager and staff permissions are checked every time — not just hidden from view.' },
+  { icon: 'key', title: 'Connect your own accounts', desc: 'Each staff member can connect their own Apollo, Clay, HubSpot or Places account.' },
+  { icon: 'refresh', title: 'Instant, always up to date', desc: 'Dashboard and Inventory show your last data right away, then quietly refresh.' },
   { icon: 'mapPin', title: 'Built for the local market', desc: 'KES pricing and mobile-money payments, end to end — not a generic template.' },
   { icon: 'printer', title: 'Print anywhere, any printer', desc: 'Send straight to any printer already connected to your device, or queue a job to a shared Epson Connect printer from anywhere — with a real print queue, not fire-and-forget.' },
-  { icon: 'calendar', title: 'Scheduled & recurring to-dos', desc: 'Set it once — a daily background job makes sure nothing falls through the cracks.' },
+  { icon: 'calendar', title: 'Scheduled & recurring to-dos', desc: 'Set it once — a daily check makes sure nothing falls through the cracks.' },
   { icon: 'eye', title: 'Storefront visibility control', desc: 'Toggle what customers see in the store, independent of internal stock tracking.' },
-  { icon: 'layers', title: 'Built to grow with the business', desc: '23 backend domains already exist — suppliers, services, software projects and more — ready to switch on.' },
-  { icon: 'checkCircle', title: 'Secure, scalable accounts', desc: 'Secure sign-in and push messaging on infrastructure built for scale.' },
-  { icon: 'users', title: 'Built by the team, for the team', desc: 'This is an in-house tool — feature requests go straight to the people who build it.' },
+  { icon: 'layers', title: 'Built to grow with the business', desc: '23 more tools already exist behind the scenes — suppliers, services, software projects and more — ready to turn on when you need them.' },
+  { icon: 'checkCircle', title: 'Secure, reliable accounts', desc: 'Secure sign-in and push messaging that keeps working smoothly as your team grows.' },
+  { icon: 'users', title: 'Made by the team, for the team', desc: 'This is an in-house tool — feature requests go straight to the people who make it.' },
 ];
 
 const INTEGRATIONS = [
@@ -180,9 +180,9 @@ const INTEGRATIONS = [
 ];
 
 const ARCHITECTURE = [
-  { title: 'Write locally, first', desc: 'Kanban moves, email drafts and custom templates save to on-device local storage the instant you make them — before any network call happens.' },
-  { title: 'Queue in an outbox', desc: 'Every change becomes an outbox entry, replayed in order once connectivity returns. A safety-net timer and connectivity listener keep the queue moving.' },
-  { title: 'Sync — and go live', desc: 'Project boards add a live sync layer on top: teammates online at the same time see each other\'s changes immediately, no refresh needed.' },
+  { title: 'Saves to your device first', desc: 'Kanban moves, email drafts and custom templates save right on your device the instant you make them — even before you\'re back online.' },
+  { title: 'Catches up automatically', desc: 'Every change you make while offline is remembered and sent in order the moment you\'re back online — there\'s nothing you need to do.' },
+  { title: 'Updates live when you\'re both online', desc: 'Project boards go one step further: teammates online at the same time see each other\'s changes immediately, no refresh needed.' },
 ];
 
 const PLATFORMS = [
@@ -277,7 +277,7 @@ app.innerHTML = `
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Features</span>
-      <h2>Nine screens. Every one of them does real work.</h2>
+      <h2>Nine tools. Every one of them does real work.</h2>
       <p>This isn't a CRUD shell — each module was built to remove a specific piece of manual work your team was doing before.</p>
     </div>
     <div class="feature-grid">
@@ -341,7 +341,7 @@ app.innerHTML = `
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">How it works</span>
-      <h2>Offline-first by design, real-time where it counts</h2>
+      <h2>Built to work offline, and update live where it counts</h2>
       <p>A field team member with no signal and two people editing the same board at once are both first-class scenarios — not edge cases patched in later.</p>
     </div>
     <div class="arch-grid">
@@ -356,7 +356,7 @@ app.innerHTML = `
   <div class="wrap">
     <div class="section-head" style="margin-bottom:36px">
       <span class="eyebrow">Everywhere the team works</span>
-      <h2>One codebase. Six platforms.</h2>
+      <h2>One app. Six kinds of devices.</h2>
     </div>
     <div class="platform-row">
       ${PLATFORMS.map(([icon, name]) => `<div class="platform-chip">${ic(icon)} ${name}</div>`).join('')}
@@ -370,7 +370,7 @@ app.innerHTML = `
       <div class="download-info">
         <span class="version-pill"><span class="dot"></span> Latest release</span>
         <h2>Get GenetechHub on your device</h2>
-        <p>Sideloaded directly — no app store review, no delay between a build and your team having it in hand.</p>
+        <p>Install it directly from here — no app store, no waiting. The moment we release something new, it's ready for you.</p>
         <details class="install-steps" open>
           <summary>${ic('smartphone', 'icon')} How to install on Android</summary>
           <ol>
@@ -400,7 +400,7 @@ app.innerHTML = `
             <span>Version: <b id="dl-android-version">${FALLBACK_VERSION}</b></span>
             <span>Size: <b id="dl-android-size">—</b></span>
           </div>
-          <div class="fallback">Android 7.0+ &middot; internal build for Genetech Hub staff</div>
+          <div class="fallback">Android 7.0+ &middot; For Genetech Hub staff only</div>
         </div>
         <div class="download-card">
           <div class="icon-lg">${ic('monitor', 'icon icon-lg')}</div>
@@ -413,7 +413,7 @@ app.innerHTML = `
             <span>Version: <b id="dl-windows-version">${FALLBACK_VERSION}</b></span>
             <span>Size: <b id="dl-windows-size">—</b></span>
           </div>
-          <div class="fallback">Windows 10/11 &middot; internal build for Genetech Hub staff</div>
+          <div class="fallback">Windows 10/11 &middot; For Genetech Hub staff only</div>
         </div>
       </div>
     </div>
